@@ -32,7 +32,7 @@ struct ContentView: View {
             guard numberColor != 3 else { return numberColor = 1 }
             numberColor += 1
         }
-            .statusBar(hidden: true)
+        .statusBar(hidden: true)
     }
     
     /// The switch that selects background color
@@ -52,25 +52,25 @@ struct ContentView: View {
     
     /// Turn on/off the camera flashlight
     func toggleFlash() {
-          guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
-          guard device.hasTorch else { return }
-          do {
-              try device.lockForConfiguration()
-
-              if (device.torchMode == AVCaptureDevice.TorchMode.on) {
-                  device.torchMode = AVCaptureDevice.TorchMode.off
-              } else {
-                  do {
-                      try device.setTorchModeOn(level: 1.0)
-                  } catch {
-                      print(error)
-                  }
-              }
-              device.unlockForConfiguration()
-          } catch {
-              print(error)
-          }
-      }
+        guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        guard device.hasTorch else { return }
+        do {
+            try device.lockForConfiguration()
+            
+            if (device.torchMode == AVCaptureDevice.TorchMode.on) {
+                device.torchMode = AVCaptureDevice.TorchMode.off
+            } else {
+                do {
+                    try device.setTorchModeOn(level: 1.0)
+                } catch {
+                    print(error)
+                }
+            }
+            device.unlockForConfiguration()
+        } catch {
+            print(error)
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
