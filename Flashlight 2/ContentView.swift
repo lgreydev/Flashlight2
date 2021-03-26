@@ -9,17 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var isLightOn = true
-    
     var body: some View {
-        ZStack {
-            isLightOn ? Color.white : Color.black
+        VStack {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Image(systemName: "flashlight.off.fill")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 200, weight: .ultraLight))
+            })
         }
-        .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            isLightOn.toggle()
-        }
-        .statusBar(hidden: true)
     }
 }
 
