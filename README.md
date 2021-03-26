@@ -1,6 +1,6 @@
 # Flashlight 2 SwiftUI
 
-![screenshot](/Screenschot/screenshot-flashlight2.jpg)
+![screenshot](/Screenshot/screenshot-flashlight2.jpg)
 
 This app can turn on/off the flashlight on your camera by a button click, as well as change colour of the background screen to green, yellow, or red.
 
