@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     
@@ -19,7 +20,9 @@ struct ContentView: View {
             isBackgroundColor()
             
             VStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    toggleFlash()
+                }, label: {
                     Image(systemName: "flashlight.off.fill")
                         .foregroundColor(.gray)
                         .font(.system(size: 200, weight: .ultraLight))
@@ -48,6 +51,28 @@ struct ContentView: View {
             return Color.black
         }
     }
+    
+    /// Turn on/off the camera flashlight
+    func toggleFlash() {
+          guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+          guard device.hasTorch else { return }
+          do {
+              try device.lockForConfiguration()
+
+              if (device.torchMode == AVCaptureDevice.TorchMode.on) {
+                  device.torchMode = AVCaptureDevice.TorchMode.off
+              } else {
+                  do {
+                      try device.setTorchModeOn(level: 1.0)
+                  } catch {
+                      print(error)
+                  }
+              }
+              device.unlockForConfiguration()
+          } catch {
+              print(error)
+          }
+      }
 }
 
 struct ContentView_Previews: PreviewProvider {
