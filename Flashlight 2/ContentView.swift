@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    /// Color for switch
+    @State var numberColor = 0
+    
     var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
+            
+            // Switch of color
+            isBackgroundColor()
             
             VStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -22,6 +26,27 @@ struct ContentView: View {
                 })
             }
         }
+        .edgesIgnoringSafeArea(.all)
+        .onTapGesture {
+            guard numberColor != 3 else { return numberColor = 1 }
+            numberColor += 1
+        }
+            .statusBar(hidden: true)
+    }
+    
+    /// The switch that selects background color
+    /// - Returns: Returns one of the colors, green, yellow, or red. Returns black by default&
+    func isBackgroundColor() -> Color {
+        switch numberColor {
+        case 1:
+            return Color.green
+        case 2:
+            return Color.yellow
+        case 3:
+            return Color.red
+        default:
+            return Color.black
+        }
     }
 }
 
@@ -30,3 +55,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
+
