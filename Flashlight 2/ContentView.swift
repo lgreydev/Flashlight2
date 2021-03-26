@@ -10,12 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Image(systemName: "flashlight.off.fill")
-                    .foregroundColor(.gray)
-                    .font(.system(size: 200, weight: .ultraLight))
-            })
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            
+            VStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image(systemName: "flashlight.off.fill")
+                        .foregroundColor(.gray)
+                        .font(.system(size: 200, weight: .ultraLight))
+                })
+            }
         }
     }
 }
