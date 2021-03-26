@@ -4,7 +4,7 @@
 
 This app can turn on/off the flashlight on your camera by a button click, as well as change colour of the background screen to green, yellow, or red.
 
-The app works in all orientations
+The app works in all orientations.
 
 ## Functional
 - Pressing the button turns the phone camera flashlight on/off.
