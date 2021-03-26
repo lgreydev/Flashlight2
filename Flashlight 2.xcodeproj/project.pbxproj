@@ -11,6 +11,9 @@
 		5E7BE6C1260DBE3800CD9232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BE6C0260DBE3800CD9232 /* ContentView.swift */; };
 		5E7BE6C3260DBE3C00CD9232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BE6C2260DBE3C00CD9232 /* Assets.xcassets */; };
 		5E7BE6C6260DBE3C00CD9232 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BE6C5260DBE3C00CD9232 /* Preview Assets.xcassets */; };
+		5E7BE6D4260E137700CD9232 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BE6D3260E137700CD9232 /* README.md */; };
+		5E7BE6D8260E149900CD9232 /* screenshot-flashlight2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BE6D7260E149900CD9232 /* screenshot-flashlight2.jpg */; };
+		5E7BE6DB260E14CC00CD9232 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BE6DA260E14CC00CD9232 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		5E7BE6C2260DBE3C00CD9232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7BE6C5260DBE3C00CD9232 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E7BE6C7260DBE3C00CD9232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7BE6D3260E137700CD9232 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E7BE6D7260E149900CD9232 /* screenshot-flashlight2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screenshot-flashlight2.jpg"; sourceTree = "<group>"; };
+		5E7BE6DA260E14CC00CD9232 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,9 @@
 		5E7BE6B2260DBE3800CD9232 = {
 			isa = PBXGroup;
 			children = (
+				5E7BE6DA260E14CC00CD9232 /* .gitignore */,
+				5E7BE6D3260E137700CD9232 /* README.md */,
+				5E7BE6D6260E146F00CD9232 /* Screenshot */,
 				5E7BE6BD260DBE3800CD9232 /* Flashlight 2 */,
 				5E7BE6BC260DBE3800CD9232 /* Products */,
 			);
@@ -67,6 +76,14 @@
 				5E7BE6C5260DBE3C00CD9232 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E7BE6D6260E146F00CD9232 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				5E7BE6D7260E149900CD9232 /* screenshot-flashlight2.jpg */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +143,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7BE6DB260E14CC00CD9232 /* .gitignore in Resources */,
+				5E7BE6D8260E149900CD9232 /* screenshot-flashlight2.jpg in Resources */,
+				5E7BE6D4260E137700CD9232 /* README.md in Resources */,
 				5E7BE6C6260DBE3C00CD9232 /* Preview Assets.xcassets in Resources */,
 				5E7BE6C3260DBE3C00CD9232 /* Assets.xcassets in Resources */,
 			);
