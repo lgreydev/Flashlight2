@@ -20,13 +20,11 @@ struct ContentView: View {
             isBackgroundColor()
             
             VStack {
-                Button(action: {
-                    toggleFlash()
-                }, label: {
+                Button(action: { toggleFlash() }) {
                     Image(systemName: "flashlight.off.fill")
                         .foregroundColor(.gray)
                         .font(.system(size: 200, weight: .ultraLight))
-                })
+                }
             }
         }
         .edgesIgnoringSafeArea(.all)
