@@ -11,7 +11,7 @@ import AVFoundation
 struct ContentView: View {
     
     /// Color for switch
-    @State var numberColor = 0
+    @State private var numberColor = 0
     
     var body: some View {
         ZStack {
